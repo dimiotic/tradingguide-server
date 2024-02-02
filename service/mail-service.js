@@ -87,11 +87,11 @@ class MailService {
     </p>
     <a target="_blank" href="
     ${
-      item.join('')[3] === 'I'
+      item.split(' ')[3] === 'I'
         ? 'https://drive.google.com/file/d/1IoIycTzbeJnfWozVrZJqbI4f2omzqtB6/view?usp=sharing'
-        : item.join('')[3] === 'II'
+        : item.split(' ')[3] === 'II'
         ? 'https://drive.google.com/file/d/121l-HR0P0Lv_-VdfgP5JvkPZLxlhucfO/view?usp=sharing'
-        : item.join('')[3] === 'III'
+        : item.split(' ')[3] === 'III'
         ? 'https://drive.google.com/file/d/1Xpu8u5VeX1atgVTmfNbQTkgwvDJPmQ4P/view?usp=sharing'
         : 'https://drive.google.com/file/d/1jiSmOAVUOym_nWgMO4x8dlrV3LCMXaWc/view?usp=sharing'
     }
