@@ -133,6 +133,7 @@ class UserService {
       const newBalance = user.balance + cash / 2;
       await UserModel.findByIdAndUpdate(user.id, { balance: newBalance });
     }
+    await mailService.sendInfoToOrder(email, item);
     return { purchaseInfo };
   }
   async changePassword(userId, oldPassword, newPassword) {
