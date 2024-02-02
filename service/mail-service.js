@@ -85,7 +85,17 @@ class MailService {
      Thank you for order: ${item}
 
     </p>
-
+    <a target="_blank" href="
+    ${
+      item.join('')[3] === 'I'
+        ? 'https://drive.google.com/file/d/1IoIycTzbeJnfWozVrZJqbI4f2omzqtB6/view?usp=sharing'
+        : item.join('')[3] === 'II'
+        ? 'https://drive.google.com/file/d/121l-HR0P0Lv_-VdfgP5JvkPZLxlhucfO/view?usp=sharing'
+        : item.join('')[3] === 'III'
+        ? 'https://drive.google.com/file/d/1Xpu8u5VeX1atgVTmfNbQTkgwvDJPmQ4P/view?usp=sharing'
+        : 'https://drive.google.com/file/d/1jiSmOAVUOym_nWgMO4x8dlrV3LCMXaWc/view?usp=sharing'
+    }
+    ">${item}</a>
     <p style="margin: 55px 0 0;color: rgb(102, 102, 102);">Best Regards,</p>
     <p style="margin: 5px 0 50px;color: rgb(102, 102, 102);"> Trading-Guide Team</p>
    
