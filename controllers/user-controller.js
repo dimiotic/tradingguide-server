@@ -161,6 +161,17 @@ class UserController {
       next(e);
     }
   }
+  async setWithdraw(req, res, next) {
+    const withdrawId = req.params.id;
+    const { status } = req.body;
+
+    try {
+      const withdraws = await userService.setWithdraw(withdrawId, status);
+      res.json(withdraws);
+    } catch (e) {
+      next(e);
+    }
+  }
 }
 
 module.exports = new UserController();

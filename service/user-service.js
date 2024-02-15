@@ -170,12 +170,23 @@ class UserService {
   }
   async checkCode(referalCode) {
     const candidate = await UserModel.findOne({ referalCode });
-    console.log(candidate);
+
     if (!candidate) {
       throw ApiError.BadRequest('Incorrect referal code');
     }
 
     return candidate._id;
+  }
+  async setWithdraw(withdrawId, status) {
+    const withdraw = await WithdrawModel.findByIdAndUpdate(withdrawId, {
+      status,
+    });
+
+    if (!withdraw) {
+      throw ApiError.BadRequest('Incorrect withdraw id');
+    }
+
+    return withdraw;
   }
 }
 

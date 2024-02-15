@@ -19,6 +19,7 @@ router.get('/referals/:code', userController.getMyReferals);
 router.post('/withdraw', userController.createWithdraw);
 router.get('/withdraw/', userController.getWithdraws);
 router.get('/withdraw/:id', userController.getWithdraws);
+router.put('/withdraw/:id', userController.setWithdraw);
 router.put('/user-password/:id', userController.changePassword);
 router.put('/user-code/:id', userController.changeRefCode);
 router.post('/purchase', userController.createPurchase);
